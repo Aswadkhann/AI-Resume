@@ -53,14 +53,8 @@ const RichTextEditor = (props: {
 			const responseText = await result.response.text();
 			const validJsonArray = JSON.parse(`[${responseText}]`);
 
-			console.log(validJsonArray);
-
 			setValue(validJsonArray?.[0]);
-			console.log("object");
-			console.log(value, "value");
 			onEditorChange(validJsonArray?.[0]);
-
-			console.log("object is here");
 		} catch (error) {
 			console.log(error);
 			toast({

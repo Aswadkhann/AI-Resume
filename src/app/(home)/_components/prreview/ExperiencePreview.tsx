@@ -13,6 +13,8 @@ const ExperiencePreview = ({ resumeInfo, isLoading }: Props) => {
 	if (isLoading) {
 		return <SkeletonLoader />;
 	}
+
+	console.log(resumeInfo?.experiences[0].workSummary, "lots of exp");
 	return (
 		<div className="w-full my-5">
 			<h5
@@ -60,7 +62,7 @@ const ExperiencePreview = ({ resumeInfo, isLoading }: Props) => {
 							}}
 							className="exp-preview  leading-[14.6px] !text-black dark:!text-white"
 							dangerouslySetInnerHTML={{
-								__html: experience?.workSummary || "",
+								__html: experience?.workSummary["bulletPoints"] ?? "",
 							}}
 						/>
 					</div>
