@@ -5,6 +5,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import PersonalInfoForm from "./forms/PersonalInfoForm";
 import { useResumeContext } from "../../../../context/resume-info-provider";
 import SummaryForm from "./forms/SummaryForm";
+import ExperienceForm from "./forms/ExperienceForm";
+import EducationForm from "./forms/EducationForm";
+import SkillsForm from "./forms/SkillsForm";
 
 const ResumeForm = () => {
 	const { resumeInfo } = useResumeContext();
@@ -69,14 +72,13 @@ const ResumeForm = () => {
 
 					{activeFormIndex === 2 && <SummaryForm handleNext={handleNext} />}
 
-					{/* {Professional Exp.}
+					{/* {Professional Exp.}*/}
 					{activeFormIndex === 3 && <ExperienceForm handleNext={handleNext} />}
-
 					{/* {Eduncational Info} */}
-					{/* {activeFormIndex === 4 && <EducationForm handleNext={handleNext} />} */}
+					{activeFormIndex === 4 && <EducationForm handleNext={handleNext} />}
 
 					{/* {Skills} */}
-					{/* {activeFormIndex === 5 && <SkillsForm />} */}
+					{activeFormIndex === 5 && <SkillsForm />}
 				</div>
 			</div>
 		</div>
