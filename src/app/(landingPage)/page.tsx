@@ -44,7 +44,7 @@ export default function Home() {
 					<div className="w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-xl shadow-lg bg-background">
 						<div className="relative w-full h-full rounded-md">
 							<Image
-								src="/image/bg-card.png"
+								src="/image/bg-back.png"
 								alt="App dashboard"
 								fill
 								className="object-contain w-full h-full rounded-md"
